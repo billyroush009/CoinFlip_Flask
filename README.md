@@ -1,5 +1,23 @@
 # CoinFlip_Flask
 #### Video Demo:  <URL HERE>
+
+### Setup:
+Make sure you have the latest version of Python installed as well as Git. Open Git in the directory you'd like the app saved in. 
+
+```
+git clone https://github.com/billyroush009/CoinFlip_Flask.git
+```
+
+```
+pip install -r CoinFlip_Flask/requirements.txt
+```
+
+```
+python CoinFlip_Flask/main.py
+```
+
+Then navigate to "http://127.0.0.1:5000" in your browser to access the running app.
+
 #### Description:
 This program is a web application that allows user account creation and login (with simple validation). Once logged in, the user can access the "flip" page which will allow them to guess the result of a coin flip. I utilized the Flask framework similarly to Week 9's project (Finance). The app begins by checking if a registered user is logged in and if not, returns the "login" page with an alert stating to login. To progress into the app the user will have to sign up with their email, username, and password. Once an account is created and logged in, the user will be returned to their home page. The home page displays a table with all of their stats from flipping a coin (will be empty at first login). From home, the user selects the "flip" tab on the navbar to load up the coin flipping page. The coin flip page allows a user to guess "heads" or "tails" then randomly flips a coin with equal chances for either. The result is displayed as an image and with text underneath to verify if your guess was right or wrong. A few stats are kept for the current session of flipping, such as: current streak, highest streak, wins, and loses. Once the user hits the "submit" button the stats from that session are loaded into their homepage's table and then the flip page is reloaded with blank metrics. From the home page you can see all your past stats (per session) and an aggregate stat row on the very bottom. A button placed above the table ("Reset Stats") allows the user to clear out their flip history and start fresh. A "logout" button is also accessible via the nav-bar that allows the user to logout and get back to the original login or sign-up pages.
 
