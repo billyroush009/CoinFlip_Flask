@@ -1,5 +1,5 @@
 # CoinFlip_Flask
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://www.youtube.com/watch?v=XXC2-ulLgO4
 
 ### Setup:
 Make sure you have the latest version of Python installed as well as Git. Open Git in the directory you'd like the app saved in. 
