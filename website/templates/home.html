@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1 align="center">Coin Flip Stats <form action="/delete-stats" method="post"><button class="btn btn-primary" type="submit">Reset Stats</button> </form>
+    </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Wins</th>
+            <th>Loses</th>
+            <th>Flips</th>
+            <th>Highest Streak</th>
+            <th>Win %</th>
+        </tr>
+    </thead>
+    <tbody>
+            {% for flip in user.flips %}
+            <tr>
+                <td>{{ flip.wins }}</td>
+                <td>{{ flip.loses }}</td>
+                <td>{{ flip.total_games }}</td>
+                <td>{{ flip.highest_streak }}</td>
+                <td>{{ flip.win_percentage }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <th>Total Wins</th>
+                <th>Total Loses</th>
+                <th>Total Flips</th>
+                <th>Overall Highest Streak</th>
+                <th>Average Win %</th>
+            </tr>
+            <tr>
+                <td>{{ total_wins }}</td>
+                <td>{{ total_loses }}</td>
+                <td>{{ total_flips }}</td>
+                <td>{{ streak }}</td>
+                <td>{{ average_win }}</td>
+            </tr>
+    </tbody>
+</table>
+{% endblock %}

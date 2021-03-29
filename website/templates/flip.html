@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1 align="center">Guess Heads or Tails</h1>
+
+    <div class="image" align="center">
+        <img src="static/images/question_mark.png" id="image">
+    </div>
+</br>
+        <div align="center">
+            <button type="button" onclick="nextPic(); ButtonClick('heads');" class="btn btn-primary">Heads</button> 
+            <button type="button" onclick="nextPic(); ButtonClick('tails');" class="btn btn-primary">Tails</button>
+
+            </br></br>
+    
+            <p id="result">I believe!</p>
+            <h2>Current Streak: <input type="text" id="counter" value="0" readonly/></h2>
+            </br>
+            <form method="POST">
+                <h2>Highest Streak: <input type="text" id="counter_highest" name="counter_highest" value="0" readonly/></h2>
+                <h2>Wins: <input type="text" id="wins" name="wins" value="0" readonly/></h2>
+                <h2>Loses: <input type="text" id="loses" name="loses" value="0" readonly/></h2>
+                <button type="submit" class="btn btn-primary">Submit Session</button>
+            </form>
+        </div>  
+
+{% endblock content %}
+
+{% block scripts %}
+
+<script
+type="text/javascript"
+src="{{ url_for('static', filename='flip.js') }}"
+></script>
+
+{% endblock scripts %}
